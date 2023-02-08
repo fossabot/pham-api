@@ -1,4 +1,8 @@
+@import '@radix-ui/colors/sand.css';
+
 body {
 	margin: 0;
+	background-color: var(--sand1);
+	color: var(--sand12);
 	font-family: 'Inter var', 'Inter', sans-serif;
 }
