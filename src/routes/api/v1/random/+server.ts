@@ -8,7 +8,14 @@ export const GET = (() => {
 	const random = Math.floor(Math.random() * photoPaths.length);
 	const randomPhoto = photoPaths[random].substring(7);
 
-	return json({
-		src: new URL(randomPhoto, BASE_URL).toString()
-	});
+	return json(
+		{
+			src: new URL(randomPhoto, BASE_URL).toString()
+		},
+		{
+			headers: {
+				'Access-Control-Allow-Origin': '*'
+			}
+		}
+	);
 }) satisfies RequestHandler;
