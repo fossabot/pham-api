@@ -1,9 +1,7 @@
 {
-  "name": "pham-api",
-  "private": true,
+  "name": "content",
   "version": "1.0.0",
   "main": "package.json",
-  "license": "UNLICENSED",
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
