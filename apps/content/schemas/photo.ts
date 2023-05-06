@@ -9,6 +9,9 @@ export default defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
+      options: {
+        storeOriginalFilename: false,
+      },
       validation: (Rule) => Rule.required(),
     }),
     defineField({
