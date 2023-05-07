@@ -1,16 +1,27 @@
 import type { RequestHandler } from './$types';
 import { json } from '@sveltejs/kit';
 import { BASE_URL } from '$env/static/private';
-const photos = import.meta.glob('$/static/photos/*.*');
+import { client } from '$lib/sanity/client';
+import groq from 'groq';
 
-export const GET = (() => {
-	const photoPaths = Object.keys(photos);
-	const random = Math.floor(Math.random() * photoPaths.length);
-	const randomPhoto = photoPaths[random].substring(7);
+export const GET = (async () => {
+	const count = await client.fetch<number>(
+		groq`count(*[_type == "photo" && !(_id in path("drafts.**")) && hide == false])`
+	);
+
+	const random = Math.floor(Math.random() * count);
+	const randomPhoto = await client.fetch<{ _id: string }>(
+		groq`
+			*[_type == "photo" && hide == false && !(_id in path("drafts.**"))][$random] {
+				_id
+			}
+		`,
+		{ random }
+	);
 
 	return json(
 		{
-			src: new URL(randomPhoto, BASE_URL).toString()
+			src: new URL(`photos/${randomPhoto._id}`, BASE_URL).toString()
 		},
 		{
 			headers: {

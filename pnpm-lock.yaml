@@ -55,6 +55,16 @@ importers:
         version: 4.9.5
 
   apps/web:
+    dependencies:
+      '@sanity/client':
+        specifier: ^6.0.1
+        version: 6.0.1
+      '@sanity/image-url':
+        specifier: ^1.0.2
+        version: 1.0.2
+      groq:
+        specifier: ^3.10.0
+        version: 3.10.0
     devDependencies:
       '@radix-ui/colors':
         specifier: ^0.1.8
@@ -2164,6 +2174,17 @@ packages:
 
   /@sanity/client@5.4.2:
     resolution: {integrity: sha512-M/ebzTGwYq+NDGMfBWxKtwtmCRJbBvXxAIQXu/J0vxnr8mXKw8gBQ7GaG0tI4WJ54w5sI6pnrD6mPiKdRHVNYw==}
+    engines: {node: '>=14.18'}
+    dependencies:
+      '@sanity/eventsource': 5.0.0
+      get-it: 8.1.1
+      rxjs: 7.8.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@sanity/client@6.0.1:
+    resolution: {integrity: sha512-q2Mi79ttJxoUjZG3LGlfIFoYfMUxra9tRaPbfmQRVJQ2I/TiVGvuE6yt38fgox796wpeZvYeuYH8L7Ms79IXYg==}
     engines: {node: '>=14.18'}
     dependencies:
       '@sanity/eventsource': 5.0.0
@@ -4650,6 +4671,11 @@ packages:
 
   /groq-js@0.2.0:
     resolution: {integrity: sha512-qJeuEgziddryH1ClsJvMoZM9aXNQbBViNZZrJwhHKr2wU8HGGM7uNWNVFglWXMX60MMaa2SClX3UohP76Ut68g==}
+    dev: false
+
+  /groq@3.10.0:
+    resolution: {integrity: sha512-e0svTundFQ9N1dI/kytsZKa3gcWSCZ/6+iVEYGLs49TGsYrc3rCGuxNR+AZA23pS6bpRuxGCnXf1+vU4vIIMQg==}
+    engines: {node: '>=14'}
     dev: false
 
   /gunzip-maybe@1.4.2:
