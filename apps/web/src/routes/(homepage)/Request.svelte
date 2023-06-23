@@ -1,6 +1,15 @@
+<script lang="ts">
+	import { PUBLIC_BASE_URL } from '$env/static/public';
+
+	export let method: string;
+	export let path: string;
+
+	$: url = new URL(path, PUBLIC_BASE_URL).toString();
+</script>
+
 <div class="request">
-	<span>GET</span>
-	<span>/api/v1/random</span>
+	<span>{method}</span>
+	<span>{url}</span>
 </div>
 
 <style lang="scss">

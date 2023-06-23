@@ -1,6 +1,6 @@
 import type { RequestHandler } from './$types';
 import { json } from '@sveltejs/kit';
-import { BASE_URL } from '$env/static/private';
+import { PUBLIC_BASE_URL } from '$env/static/public';
 import { client } from '$lib/sanity/client';
 import groq from 'groq';
 
@@ -21,7 +21,7 @@ export const GET = (async () => {
 
 	return json(
 		{
-			src: new URL(`photos/${randomPhoto._id}`, BASE_URL).toString()
+			src: new URL(`photos/${randomPhoto._id}`, PUBLIC_BASE_URL).toString()
 		},
 		{
 			headers: {

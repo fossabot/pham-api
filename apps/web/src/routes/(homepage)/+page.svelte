@@ -7,13 +7,16 @@
 </script>
 
 <main>
-	<h1>pham-api.alexanderliu.dev</h1>
+	<div class="header">
+		<h1>Pham API</h1>
+		<span class="count">{data.count}</span>
+	</div>
 	<div class="grid">
 		<div>
 			<img src={data.photo.src} alt="pham" />
 		</div>
 		<div class="api">
-			<Request />
+			<Request method="GET" path="/api/v1/random" />
 			<Response src={data.photo.src} />
 		</div>
 	</div>
@@ -24,12 +27,23 @@
 		margin: 24px;
 	}
 
-	h1 {
-		margin: 0 0 16px 0;
-		font-weight: 450;
-		font-size: 18px;
-		letter-spacing: -0.014em;
-		line-height: 25px;
+	.header {
+		display: flex;
+		align-items: flex-start;
+		gap: 4px;
+
+		h1 {
+			margin: 0 0 16px 0;
+			font-weight: 450;
+			font-size: 18px;
+			letter-spacing: -0.014em;
+			line-height: 25px;
+		}
+
+		.count {
+			font-size: 14px;
+			letter-spacing: -0.006em;
+		}
 	}
 
 	.grid {
