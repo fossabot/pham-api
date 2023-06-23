@@ -1,7 +1,7 @@
 import type { RequestHandler } from './$types';
 import { json } from '@sveltejs/kit';
 import { PUBLIC_BASE_URL } from '$env/static/public';
-import { client } from '$lib/sanity/client';
+import { client } from '$lib/sanity/client.server';
 import groq from 'groq';
 
 export const GET = (async () => {

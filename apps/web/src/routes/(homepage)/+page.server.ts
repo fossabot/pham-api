@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { client } from '$lib/sanity/client';
+import { client } from '$lib/sanity/client.server';
 import groq from 'groq';
 
 export const load = (async () => {

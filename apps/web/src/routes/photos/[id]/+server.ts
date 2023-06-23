@@ -1,6 +1,6 @@
 import type { RequestHandler } from './$types';
 import { error } from '@sveltejs/kit';
-import { client } from '$lib/sanity/client';
+import { client } from '$lib/sanity/client.server';
 import { builder } from '$lib/sanity/imageUrlBuilder';
 import groq from 'groq';
 
