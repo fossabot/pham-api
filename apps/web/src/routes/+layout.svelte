@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import '@radix-ui/colors/sand.css';
 </script>
 
 <svelte:head>
