@@ -9,3 +9,12 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      patches:
+        update-types:
+          - "patch"
+      sanity:
+        patterns:
+          - "sanity"
+          - "@sanity/vision"
+          - "groq"
