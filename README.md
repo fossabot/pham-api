@@ -1,6 +1,7 @@
 # pham-api
 
 ![a collage of photos of pham from the api with the text "://pham/random" in the center](./assets/banner.jpg)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falexanderl19%2Fpham-api.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Falexanderl19%2Fpham-api?ref=badge_shield)
 
 <https://pham-api.alexanderliu.dev/>
 
@@ -31,3 +32,6 @@ curl https://pham-api.alexanderliu.dev/api/v1/random
 This repo has been made source available, but is **not** currently licensed under an open source license.
 
 Copyright © 2023 Alexander Liu
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falexanderl19%2Fpham-api.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Falexanderl19%2Fpham-api?ref=badge_large)
